@@ -9,7 +9,7 @@ const MapCard = ({ title, author, image }) => {
     >
       <div className={styles['map-info']}>
         <div className={styles['map-title']}>{title}</div>
-        <div className={styles['map-author']}>Автор: {author}</div>
+        <div className={styles['map-author']}>Поколение: {author}</div>
       </div>
     </div>
   )

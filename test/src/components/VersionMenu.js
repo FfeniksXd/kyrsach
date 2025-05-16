@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import styles from '../styles/components/VersionMenu.module.css';
 
 const VersionMenu = () => {
-  const allVersions = ["1.21","1.20", "1.19", "1.18", "1.17", "1.16", "1.15", "1.14", "1.13","1.1"];
+  const AlDate = ["1950","1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958","1959"];
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredVersions, setFilteredVersions] = useState(allVersions);
+  const [filteredVersions, setFilteredDate] = useState(AlDate);
 
   const handleSearchChange = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
     
     if (term === '') {
-      setFilteredVersions(allVersions);
+      setFilteredDate(AlDate);
     } else {
-      setFilteredVersions(
-        allVersions.filter(version => 
-          version.includes(term) || 
-          version.replace('.', '').includes(term.replace('.', ''))
+      setFilteredDate(
+        AlDate.filter(date => 
+          date.includes(term) || 
+          date.replace('.', '').includes(term.replace('.', ''))
         )
       );
     }
@@ -24,11 +24,11 @@ const VersionMenu = () => {
 
   return (
     <div className={styles['versions-menu']}>
-      <h3>Версия карты</h3>
+      <h3>Года</h3>
       <input 
         type="text" 
         className={styles['version-search']} 
-        placeholder="Поиск версии..." 
+        placeholder="Поиск года..." 
         value={searchTerm}
         onChange={handleSearchChange}
       />
@@ -43,7 +43,7 @@ const VersionMenu = () => {
         ))
       ) : (
         <div className={styles['no-results']}>
-          Версии не найдены
+          Год не найден
         </div>
       )}
     </div>

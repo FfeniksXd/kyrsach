@@ -16,12 +16,12 @@ const HomePage = () => {
   
   // Состояние для карт и поиска
   const [maps, setMaps] = useState([
-    { id: 1, title: "Adventure Time", author: "Notch", image: "/img/map/1.jpg" },
-    { id: 2, title: "SkyBlock Extreme", author: "MinecraftTeam", image: "/img/map/2.jpg" },
-    { id: 3, title: "Parkour Master", author: "JumpKing", image: "/img/map/3.jpg" },
-    { id: 4, title: "Survival Island", author: "SurvivalPro", image: "/img/map/4.jpg" },
-    { id: 5, title: "Zombie Apocalypse", author: "HorrorMaster", image: "/img/map/5.jpg" },
-    { id: 6, title: "Puzzle Dungeon", author: "PuzzleCreator", image: "/img/map/6.jpg" }
+    { id: 1, title: "", author: "1", image: "/img/map/1.jpg" },  
+    { id: 2, title: "", author: "2", image: "/img/map/2.jpg" },
+    { id: 3, title: "", author: "3", image: "/img/map/3.jpg" },
+    { id: 4, title: "", author: "4", image: "/img/map/4.jpg" },
+    //{ id: 5, title: "", author: "", image: "/img/map/5.jpg" },
+    //{ id: 6, title: "", author: "", image: "/img/map/6.jpg" }
   ]);
   const [searchTerm, setSearchTerm] = useState('');
   const [editingMapId, setEditingMapId] = useState(null);
@@ -58,7 +58,7 @@ const HomePage = () => {
     localStorage.removeItem('isAuthenticated');
   };
 
-  // Управление картами
+ 
   const handleDelete = (id) => {
     setMaps(maps.filter(map => map.id !== id));
   };
@@ -67,14 +67,14 @@ const HomePage = () => {
     const newId = maps.length > 0 ? Math.max(...maps.map(m => m.id)) + 1 : 1;
     const newMap = {
       id: newId,
-      title: `Новая карта ${newId}`,
+      title: `Новый блок ${newId}`,
       author: "Администратор",
       image: "/img/map/default.jpg"
     };
     setMaps([...maps, newMap]);
   };
 
-  // Редактирование карт
+
   const startEditing = (map) => {
     setEditingMapId(map.id);
     setEditedTitle(map.title);

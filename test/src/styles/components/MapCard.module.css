@@ -6,15 +6,15 @@
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    border: 2px solid #B22B30;
+    border: 2px solid #300101;
     transition: all 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(31, 0, 0, 0.3);
 }
 
 .map-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-    border-color: #d1353a;
+    box-shadow: 0 8px 15px rgba(5, 148, 43, 0.4);
+    border-color: #088249;
 }
 
 .map-card::before {
@@ -24,7 +24,7 @@
     left: 0;
     right: 0;
     height: 70px;
-    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.048), transparent);
 }
 
 .map-info {
@@ -43,8 +43,8 @@
 
 .map-author {
     font-size: 14px;
-    color: #ccc;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    color: #fdfdfd;
+    text-shadow: 1px 1px 2px rgba(3, 82, 36, 0.8);
 }
 
 @media (max-width: 768px) {

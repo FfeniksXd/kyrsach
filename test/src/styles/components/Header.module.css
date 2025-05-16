@@ -3,7 +3,7 @@
     width: auto;
     margin-bottom: 25px;
     transition: height 0.3s ease;
-    filter: drop-shadow(0 0 5px rgba(178, 43, 48, 0.7));
+    filter: drop-shadow(0 0 5px rgb(0, 0, 2));
 }
 
 

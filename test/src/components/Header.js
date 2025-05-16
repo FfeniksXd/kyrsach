@@ -4,7 +4,7 @@ import styles from '../styles/components/Header.module.css'
 const Header = () => {
   return (
     <div className={styles.logo}>
-      <img src="/img/SaveCraft.png" alt="Minecraft Maps Logo" />
+      <img src="/img/logobig.jpg" alt="" />
     </div>
   )
 }
